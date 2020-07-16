@@ -1,0 +1,8 @@
+
+Tests/Selenium.py
+Tests/MySQL.py
+Tests/Writting excel.py
+Tests/SQLite.py
+*.pyc
+Dynamic Crawler/test.xlsx
+Dynamic Crawler/Debugger.py
