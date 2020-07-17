@@ -1,7 +1,6 @@
 # -*- coding:UTF-8 -*-
 
 import re
-from bs4 import BeautifulSoup
 from HtmlDownloader import HtmlDownloader
 import json
 
@@ -115,63 +114,15 @@ class HtmlParser(object):
             return None
 
 
-
-    # def __init__(self):
-    #     self.home_cont = HtmlDownloader().download('http://www.mtime.com/')
-    #     self.page_urls = self._parse_home(self.home_cont)
-    #
-    # def _parse_home(self, home_cont):
-    #     '''
-    #     Extract all valid links from the home page
-    #     :param home_cont: Downloaded home page content
-    #     :return:
-    #     '''
-    #     if home_cont is None:
-    #         return
-    #     soup = BeautifulSoup(home_cont, 'html.parser')
-    #     new_urls = []
-    #     hrefs = soup.find('ul', class_='saling-list')
-    #     hrefs = hrefs.find_all('a', href=re.compile('\.com\/\d*\/'), title=False)
-    #     for i in hrefs:
-    #         new_urls.append(i['href'])
-    #     return new_urls
-    #
-    # def parse(self):
-    #     '''
-    #     Extract wanted data from the movie page
-    #     :param page_url: Target page url
-    #     :param html_cont: Downloaded movie page content
-    #     :return:
-    #     '''
-    #     page_urls = []
-    #     titles = []
-    #     tags = []
-    #     hotnesses = []
-    #     musics = []
-    #     graphs = []
-    #     directors = []
-    #     tales = []
-    #     box_offices = []
-    #     for url in self.page_urls:
-    #         page_url = url
-    #         html_cont = HtmlDownloader().download(url)
-    #         soup = BeautifulSoup(html_cont, 'lxml')
-    #         title = soup.find('div', pan='M14_Movie_Overview_Name').get_text().replace('\n', '')
-    #         tag = soup.find('div', class_='otherbox __r_c_').get_text()
-    #         titles.append(title)
-    #         tags.append(tag)
-    #     return titles, tags, hotnesses, musics, graphs, directors, tales, box_offices, page_urls
-
-
 # Troubleshoot for this section
-
+'''
 if __name__ == '__main__':
     page_url = 'http://movie.mtime.com/boxoffice/#CN/all'
     content = HtmlDownloader().root_download('http://movie.mtime.com/boxoffice/#CN/all')
     res = HtmlParser().parser_url(page_url, content)
     print(res)
 
-
+'''
 
 
 

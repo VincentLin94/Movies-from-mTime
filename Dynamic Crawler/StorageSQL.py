@@ -74,11 +74,4 @@ class Storage(object):
         self.db.close()
 
 
-# Troubleshoot for this section
-'''
-if __name__ == '__main__':
-    
-
-
-'''
 

@@ -6,3 +6,5 @@ Tests/SQLite.py
 *.pyc
 Dynamic Crawler/test.xlsx
 Dynamic Crawler/Debugger.py
+Dynamic Crawler/~$mTime.xlsx
+Tests/test.xlsx
