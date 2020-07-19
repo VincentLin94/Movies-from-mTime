@@ -9,7 +9,6 @@ class Storage(object):
     def __init__(self):
         self.wb = openpyxl.load_workbook('mTime.xlsx')
         self.sheet = self.wb.get_sheet_by_name('Movies from mTime')
-        self.datas = []
 
     def write_head(self):
         '''
